@@ -1,0 +1,591 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/*Navbar*/
+.navbar {
+    background-color: white;
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1;
+    border-top: 0.5px solid rgb(221, 218, 218);
+    border-bottom: 0.5px solid rgb(221, 218, 218);
+}
+
+.insta-logo {
+    width: 200px;
+    height: 50px;
+    background-image: url(instagram_logo4.png);
+    background-repeat: no-repeat;
+    background-image: cover;
+    position: relative;
+    margin-left: 11%;
+    bottom: 12%;
+}
+
+/*search-icon*/
+.search-bar {
+    height: 30px;
+    width: 270px;
+    display: flex;
+    flex-direction: row;
+    border: 0.2px solid rgb(221, 218, 218);
+    border-radius: 4px;
+    margin-right: 5rem;
+
+
+}
+
+input {
+    background-color: whitesmoke;
+    text-align: center;
+    width: 270px;
+    border-style: none;
+}
+
+.search-icon {
+    position: absolute;
+    margin-left: 90px;
+    top: 24px;
+    color: grey;
+    font-size: 13px;
+}
+
+/*top-corner-icons*/
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul li {
+    list-style: none;
+    margin: 0 3px;
+}
+
+
+ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    line-height: 63px;
+    background: white;
+    border-radius: 50%;
+    font-size: 22px;
+    color: black;
+    transition: .5s;
+}
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: grey;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+ul li a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px grey;
+}
+
+ul li a:hover {
+    color: grey;
+    box-shadow: 0 0 5px grey;
+    text-shadow: 0 0 5px grey;
+}
+
+
+.icon-tools {
+    width: 250px;
+    height: 50px;
+    position: relative;
+    right: 8%;
+}
+
+.msg-no {
+    background-color: red;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    height: 0.99rem;
+    width: 0.99rem;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+   bottom:2.3rem;
+   left:1.5rem;
+    z-index: 2;
+
+}
+
+.dot {
+    font-size: 2rem;
+    color: red;
+    position: relative;
+    right:0.9rem;
+    top: 0.5rem;
+    z-index: 1;
+}
+
+
+
+/* Main feed*/
+.block{
+    height: 11640px;
+    width:40%;
+    position: absolute;
+    left:19rem;
+}
+.feed-main {
+    width: 100%;
+    height: 12250px;
+    position: absolute;
+    top: 8%;
+    margin: 0 auto;
+    background-color: #fafafafa;
+
+}
+
+.feed-story {
+    height: 150px;
+    width: 2000px;
+    border: 02.px solid rgb(221, 218, 218);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 0px;
+    padding-left: 14px;
+}
+
+.storyouter {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    /* left: 305px; */
+    top: 40px;
+    overflow: auto;
+    cursor: all-scroll;
+    border: 0.2px solid rgb(221, 218, 218);
+    border-right: none;
+    background-color: white;
+
+}
+
+.storyouter::-webkit-scrollbar {
+    display: none;
+}
+
+::selection {
+    text-shadow: 1px 1px 2px black;
+    font-weight: 700;
+}
+
+
+.position {
+    width: 100%;
+    position: absolute;
+    left: 20%;
+    background-color: white;
+    overflow: hidden;
+
+
+}
+
+.story {
+    height: 71px;
+    width: 71px;
+    border-radius: 50%;
+    background: linear-gradient(to right, orange, #fa7e1e, #d62976, purple, #962fbf, #4f5bd5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.div {
+    height: 62.5px;
+    width: 62.5px;
+    border-radius: 50%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    bottom: 0.13rem;
+    right: 0.08rem;
+    border: 0.1rem solid white;
+}
+
+.wrap {
+    height: 100px;
+    width: 100px;
+}
+
+/*username below story icons*/
+.name {
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    width: 80%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    position: relative;
+    top: 5px;
+    right:20px;
+    overflow: hidden;
+}
+.name p{
+    padding-left: 50px;
+}
+
+
+/*main feed div*/
+
+.content {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    right: 0.3%;
+    position: relative;
+    margin-top: 13%;
+
+}
+
+.feed {
+    width: 100%;
+    max-height: 10000px;
+}
+
+.feed-post {
+    height: 850px;
+    width: 100%;
+    position: relative;
+    top: 25%;
+    left: 0.1%;
+    border: 0.2px solid rgb(221, 218, 218);
+    border-right: none;
+}
+
+.feed-post-top {
+    width: 100%;
+    height: 10%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.profile-icon img {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+
+    position: relative;
+    top: 12.3px;
+    left: 2.13px;
+
+    border: 0.1rem solid white;
+}
+
+.profile-icon {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    right: 14%;
+
+
+}
+
+.feed-post-name {
+    position: relative;
+    right: 29%;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.03rem;
+}
+
+.light {
+    font-size: 0.9rem;
+}
+
+.icon {
+    position: relative;
+    left: 5.7rem;
+}
+
+
+/*post*/
+.post1 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/D1EX2Flzk5c)no-repeat center center/cover;
+
+}
+
+.post2 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/IXVXEO8UQWA)no-repeat center center/cover;
+    
+}
+
+.post3 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/8260248)no-repeat center center/cover;
+    
+}
+
+.post4 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/410577)no-repeat center center/cover;
+    
+}
+
+.post5 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/1424340)no-repeat center center/cover;
+    
+}
+
+.post6 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/4780587)no-repeat center center/cover;
+    
+}
+
+.post7 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/SqOWNqjKltU)no-repeat center center/cover;
+    
+}
+
+.post8 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/851199)no-repeat center center/cover;
+    
+}
+
+.post9 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/999896)no-repeat center center/cover;
+    
+}
+
+.post10 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/2429507)no-repeat center center/cover;
+    
+}
+
+.post11 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/1550489)no-repeat center center/cover;
+    
+}
+
+.post12 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/LyJST5KQROo)no-repeat center center/cover;
+    
+}
+
+.post13 {
+    height: 90%;
+    width: 100%;
+    border-bottom: 0.2px solid rgb(221, 218, 218);
+    background: url(https://source.unsplash.com/collection/3214295)no-repeat center center/cover;
+    
+}
+
+
+.post-bottom {
+    position:absolute;
+    bottom:0px;
+    height: 14%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color:black;
+    /* display: flex;
+    align-items: center; */
+    background-color: white;
+}
+
+.left {
+
+    height: 80%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.right {
+    height: 80%;
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+
+
+/*right corner div*/
+.suggestion {
+    height: 800px;
+    width: 40%;
+    position: fixed;
+    top: 8%;
+    left: 60.1%;
+    border-left: 0.2px solid rgb(221, 218, 218);
+}
+
+.p-icon {
+    height: 8%;
+    width: 8%;
+    position: relative;
+    bottom: 0.8rem;
+    right: 5rem;
+}
+
+.account-switch {
+    width: 100%;
+    height: 24%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.account-name {
+    position: relative;
+    right: 27%;
+    top: 3%;
+}
+
+.switch {
+    color: rgb(64, 196, 248);
+    position: relative;
+    right: 24.7%;
+    top: 3%;
+}
+
+.id-icon {
+    height: 5%;
+    width: 5%;
+    position: relative;
+    bottom: 0.8rem;
+    right: 4rem;
+}
+
+.follow {
+    height: 1rem;
+    width: 2rem;
+    color: rgb(64, 196, 248);
+    position: relative;
+    right: 27.8%;
+    font-size: 1.02rem;
+}
+
+.heading {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 3rem;
+}
+
+.heading1 {
+    position: relative;
+    right: 17%;
+}
+
+.heading2 {
+    font-weight: bold;
+    position: relative;
+    right: 19.8%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 3rem;
+    position: relative;
+    bottom: 3.5rem;
+}
+
+.text {
+    height: 30px;
+    width: 120px;
+    position: relative;
+    right: 26%;
+}
